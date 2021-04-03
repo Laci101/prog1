@@ -255,7 +255,8 @@ void Image::draw_lines() const
 	}
 }
 
-Function::Function(Fct f, double r1, double r2, Point xy, int count, double xscale, double yscale){
+Function::Function(Fct f, double r1, double r2, Point xy, int count, double xscale, double yscale)
+{
 	if (r2-r1<=0) error ("Rossz range!");
 	if (count<=0) error ("Rossz count!");
 	double dist = (r2-r1)/count;
@@ -263,6 +264,7 @@ Function::Function(Fct f, double r1, double r2, Point xy, int count, double xsca
 	for (int i = 0; i < count; ++i){
 		add(Point(xy.x+int(r*xscale), xy.y-int(f(r)*yscale)));
 		r += dist;
+		
 	}
 }
 

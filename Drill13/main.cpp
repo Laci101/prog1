@@ -28,8 +28,9 @@ int main()
     for(int i=0; i<8; ++i)
     { 
     	r.push_back (new Rectangle(Point{i*100,i*100},100,100));
-    	r[r.size()-1].set_fill_color(Color::red);
-    	win.attach(r[r.size()-1]);
+    	r[i].set_fill_color(Color::red);
+    	r[i].set_color(Color::red);
+    	win.attach(r[i]);
     }	
     
     Image ny1(Point{0,200},"nyarla.jpg");
@@ -69,7 +70,7 @@ int main()
     		newx= 100 * x -s.point(0).x;
     		newy= 100 * y -s.point(0).y;
     		s.move(newx,newy);
-    		win.set_label("s");
+    		win.set_label("Canvas");
     		win.wait_for_button();
     	}
     	

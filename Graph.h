@@ -313,6 +313,8 @@ typedef double Fct(double);
 
 struct Function : Shape {
 	Function(Fct f, double r1, double r2, Point orig, int count = 100, double xscale = 25, double yscale = 25);
+	
+	
 };
 
 struct Axis : Shape {
