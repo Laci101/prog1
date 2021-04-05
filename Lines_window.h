@@ -29,6 +29,7 @@ private:
     void red_pressed() { change_c(Color::red); hide_color(); }
     void blue_pressed() { change_c(Color::blue); hide_color(); }
     void black_pressed() { change_c(Color::black); hide_color(); }
+    void yellow_pressed(){ change_c(Color::yellow); hide_color();}
 
     void dot_pressed() { change_s(Line_style::dot); hide_style(); }
     void dash_pressed() { change_s(Line_style::dash); hide_style(); }

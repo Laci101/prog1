@@ -7,3 +7,6 @@ int main()
     return gui_main();
 }
 
+/*
+    g++ main.cpp ../Graph.cpp ../Window.cpp ../GUI.cpp ../Lines_window.cpp -o main `fltk-config --ldflags --use-images`
+*/

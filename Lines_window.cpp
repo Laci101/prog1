@@ -43,6 +43,11 @@ Lines_window::Lines_window(Point xy, int w, int h, const string& title)
             reference_to<Lines_window>(pw).black_pressed();
         }
     });
+    color_menu.attach(new Button{Point{0, 0}, 0, 0, "yellow",
+        [](Address, Address pw) {
+            reference_to<Lines_window>(pw).yellow_pressed();
+        }
+    });
     style_menu.attach(new Button{Point{0, 0}, 0, 0, "dot",
         [](Address, Address pw) {
             reference_to<Lines_window>(pw).dot_pressed();
